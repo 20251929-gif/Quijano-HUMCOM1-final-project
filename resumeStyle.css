@@ -1,14 +1,14 @@
 .container {
-    opacity: 0.5;
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(0, 0, 0);
     width: 1000px;
-    height: 2000px;
+    height: auto;
     border-radius: 15px;
     border: 2px solid rgb(0, 0, 0);
     box-shadow: 0 4px 10px #535353;
     text-align: center;
     padding: 50px;
     margin: 0 auto;
+    opacity: 0.70;
 }
 
 .topcontainer{
@@ -30,8 +30,28 @@
     font-size: 65px;
     color: rgb(255, 255, 255);
 }
+.box {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid rgb(43, 43, 43);
+    box-shadow: 0 4px 10px rgb(219, 218, 218);
 
-.cardInfo, .cardAbout, .cardProject, .cardActivity {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    transition: .35s;
+}
+
+.box:hover {
+    transform: scale(1.05)
+}
+
+.cardInfo, .cardAbout, .cardProject, .cardActivity, .cardReflection {
     background-color: rgb(127, 121, 134);
     width: 300px;
     height: 300px;
@@ -63,7 +83,21 @@
     padding: 10px;
     margin: 0 auto;
 
-    transition: .35s;
+    transition: .01s;
+}
+
+.profile img {
+    width: 150px;   
+    height: 150px;
+    border-radius: 50%;  
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto; 
+    transition: 0.35s;
+}
+
+.profile img:hover{
+    transform: scale(1.25);
 }
 
 .card:hover {
@@ -75,7 +109,7 @@
     width: 150px;
     height: 25px;
     border-radius: 15px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 2px solid rgb(43, 43, 43);
     box-shadow: 0 4px 10px rgb(219, 218, 218);
 
     display: flex;
@@ -94,12 +128,12 @@
 
 .cardAbout {
     width: 600px;
-    height: auto;
+    height: 400px;
 }
 
 .cardProject {
     width: 950px;
-    height: 400px;
+    height: auto;
     border-radius: 15px;
     text-align: center;
     padding: 10px;
@@ -109,7 +143,17 @@
 
 .cardActivity{
     width: 950px;
-    height: 400px;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.cardReflection {
+    width: 950px;
+    height: 200px;
     border-radius: 15px;
     text-align: center;
     padding: 10px;
@@ -126,6 +170,58 @@
     margin-left: auto;
     line-height: 25px;
 }
+.card1 {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    text-align: justify;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    border: 2px solid rgb(63, 63, 63);
+    background-color: rgb(3, 3, 3);
+}
+.card2 {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    text-align: justify;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    border: 2px solid rgb(63, 63, 63);
+    background-color: rgb(3, 3, 3);
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+}
+
+.card2 .content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5px);
+    transition: 0.25s ease;
+    z-index: 10;
+}
+
+.card2:hover .content {
+    transform: scale(1.05);
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+    max-width: 500px;
+}
+
 
 .work {
     background-color: white;
@@ -141,7 +237,7 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, rgb(34, 34, 34) 0%, rgb(71, 71, 71) 50%, rgb(114, 114, 114) 100%);
+    background-image: linear-gradient(to bottom, rgb(15, 27, 46) 0%, rgb(67, 72, 145) 50%, rgb(118, 168, 201) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -151,3 +247,18 @@ button {
     display: inline-block; 
     border-radius: 8px;
 }
+
+h2 {
+    text-align: center;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    line-height: 25px;
+}
+
+h3 {
+    text-align: center;
+}
+
+
